@@ -11,3 +11,12 @@ export const singleFileUpload = async (data) => {
         throw error;
     }
 }
+
+export const getallSingleFiles = async(data) => {
+    try {
+        const {data} = await axios.get(apiUrl+'list');
+        return data;
+    } catch (error) {
+        throw error;
+    }
+}
