@@ -1,5 +1,5 @@
 import React,{ Fragment, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';  //importing bootstrap
 import {singleFileUpload} from './api'
 
 
@@ -9,7 +9,7 @@ const FileUpload = () => {
 	const singleFileChange = (e) => {
 		setSingleFile(e.target.files[0]);
 	}
-	const uploadSingleFile = async () => {
+	const uploadSingleFile = async () => {  //asynchronous function
 		const formData = new FormData();
 		formData.append('file', singleFile);
 		await singleFileUpload(formData);

@@ -1,7 +1,7 @@
 import FileUpload from './components/FileUpload';
-
+//functional component
 const App = () =>  {
-  return(
+    return(
     <div className="container mt-4">
       <h4 className="display-4 text-center mb-4">
         FILE UPLOAD TO AWS
@@ -10,8 +10,9 @@ const App = () =>  {
         <FileUpload />
       </div>
     </div>
-  );
-};
+        );
+}
+
 
 export default App;
 

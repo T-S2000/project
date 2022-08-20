@@ -2,7 +2,7 @@
 const SingleFile = require('../models/singlefile');
 const singleFileUpload = async(req,res,next) => {
     try {
-        const file = new S({
+        const file = new SingleFile({
             fileName: req.file.originalname,
             filePath: req.file.path, 
         });
@@ -11,7 +11,7 @@ const singleFileUpload = async(req,res,next) => {
     } catch (error) {
         res.status(400).send(error.message);
     }
-};
+}
 
 const getallSingleFiles = async(req,res,next) => {
     try {
@@ -20,9 +20,9 @@ const getallSingleFiles = async(req,res,next) => {
     } catch (error) {
         res.status(400).send(error.message);
     }
-};
+}
 
 module.exports = {
     singleFileUpload,
     getallSingleFiles
-};
+}

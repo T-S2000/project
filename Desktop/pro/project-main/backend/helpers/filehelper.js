@@ -7,7 +7,7 @@ const storage =multer.diskStorage({
         cb(null,'uploads');
     },
     filename: (req,file,cb) => {
-        cb(null,new Date().toISOString().replace(/:/g,'-') + '-' + file.originalname);
+        cb(null,new Date().toISOString().replace(/:/g,'-') + '-' + file.originalname); //returns a string in simplified extended ISO format of 24 or 27 characters long ( YYYY-MM-DDTHH:mm:ss)
     }
 });
 
